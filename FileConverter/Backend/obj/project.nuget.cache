@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+WBMDs1cwEU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Xxwha\\Downloads\\Programming Projects\\FileConverter\\Backend\\FileConverter.Backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Xxwha\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

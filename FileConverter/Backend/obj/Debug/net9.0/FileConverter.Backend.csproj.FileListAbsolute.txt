@@ -1,0 +1,6 @@
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.AssemblyInfoInputs.cache
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.AssemblyInfo.cs
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.csproj.CoreCompileInputs.cache
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.sourcelink.json
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.csproj.AssemblyReference.cache

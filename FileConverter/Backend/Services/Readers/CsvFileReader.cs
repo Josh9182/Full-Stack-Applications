@@ -1,21 +1,24 @@
 using CsvHelper;
-using CsvHelper.Globalization;
+using CsvHelper.Configuration;
 using System.Globalization;
 using FileConverter.Interfaces;
 
 namespace Services.Readers;
 
-public class CsvReader : IReader {
+public class CsvFileReader : IFileParser {
     public async Task<List<Dictionary<string, object>>> Reader(Stream stream)
     {
-        using (var reader = new StreamReader(strean)) ;
-        using (var csvReader = new CsvReader(Reader, new CsvConfiguration(CultureInfo.InvariantCulture) // Initiating CsvReader
+        using var reader = new StreamReader(stream);
+
+        var config = new CsvConfiguration(CultureInfo.InvariantCulture)
         {
             Delimiter = ",",
             TrimOptions = TrimOptions.Trim,
             HasHeaderRecord = true,
             IgnoreBlankLines = true
-        }));
+        };
+
+        using (var csvReader = new CsvReader(reader, config)) ;
 
         var records = new List<Dictionary<string, object>>();
 

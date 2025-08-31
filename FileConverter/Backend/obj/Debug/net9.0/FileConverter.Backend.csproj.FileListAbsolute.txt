@@ -4,3 +4,10 @@ C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\ne
 C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.csproj.CoreCompileInputs.cache
 C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.sourcelink.json
 C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.csproj.AssemblyReference.cache
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\bin\Debug\net9.0\FileConverter.Backend.deps.json
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\bin\Debug\net9.0\FileConverter.Backend.dll
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\bin\Debug\net9.0\FileConverter.Backend.pdb
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.dll
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\refint\FileConverter.Backend.dll
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.pdb
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\ref\FileConverter.Backend.dll

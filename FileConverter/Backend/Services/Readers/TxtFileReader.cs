@@ -12,7 +12,7 @@ public class TxtFileReader : IFileParser
         int index = 0;
 
         string? line; // empty line object
-        while (line = (await reader.ReadLineAsync()) != null) // Loop as long as the stream can keep reading a new line
+        while ((line = await reader.ReadLineAsync()) != null) // Loop as long as the stream can keep reading a new line
         {
             var row = new Dictionary<string, object>();
             string indexString = index.ToString();

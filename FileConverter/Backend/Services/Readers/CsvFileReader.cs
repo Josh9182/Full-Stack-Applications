@@ -18,7 +18,7 @@ public class CsvFileReader : IFileParser {
             IgnoreBlankLines = true
         };
 
-        using (var csvReader = new CsvReader(reader, config)) ;
+        using var csvReader = new CsvReader(reader, config);
 
         var records = new List<Dictionary<string, object>>();
 
@@ -28,7 +28,7 @@ public class CsvFileReader : IFileParser {
         while (await csvReader.ReadAsync()) // Looping as long the csvReader locates a line
         {
             var row = new Dictionary<string, object>();
-            foreach (var header in row)
+            foreach (var header in csvReader.HeaderRecord)
             {
                 row[header] = csvReader.GetField(header);
             }

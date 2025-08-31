@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 
 namespace ServiceTests.ParserTests;
+
 public class CsvFileReaderTests
 {
     [Fact]

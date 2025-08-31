@@ -1,0 +1,6 @@
+@AutomiqoSoftware_HostAddress = http://localhost:5088
+
+GET {{AutomiqoSoftware_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

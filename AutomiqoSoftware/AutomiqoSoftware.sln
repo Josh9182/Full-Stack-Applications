@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomiqoSoftware", "AutomiqoSoftware.csproj", "{627591E7-AD25-E785-F412-B0D28756ED77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomiqoSoftware.Tests", "AutomiqoSoftware.Tests\AutomiqoSoftware.Tests.csproj", "{49615AA3-32A6-4AD6-9B8C-8C5628253082}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\Downloads\Test\Test.csproj", "{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Debug|x64.Build.0 = Debug|Any CPU
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Debug|x86.Build.0 = Debug|Any CPU
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Release|x64.ActiveCfg = Release|Any CPU
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Release|x64.Build.0 = Release|Any CPU
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Release|x86.ActiveCfg = Release|Any CPU
+		{627591E7-AD25-E785-F412-B0D28756ED77}.Release|x86.Build.0 = Release|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Debug|x64.Build.0 = Debug|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Debug|x86.Build.0 = Debug|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Release|x64.ActiveCfg = Release|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Release|x64.Build.0 = Release|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Release|x86.ActiveCfg = Release|Any CPU
+		{49615AA3-32A6-4AD6-9B8C-8C5628253082}.Release|x86.Build.0 = Release|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Debug|x64.Build.0 = Debug|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Debug|x86.Build.0 = Debug|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Release|x64.ActiveCfg = Release|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Release|x64.Build.0 = Release|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Release|x86.ActiveCfg = Release|Any CPU
+		{BFC8F8AC-2CB3-4B6D-8ECE-F1E11A1A0D77}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80C9117A-FEF4-43A7-BAFE-592252F49F01}
+	EndGlobalSection
+EndGlobal

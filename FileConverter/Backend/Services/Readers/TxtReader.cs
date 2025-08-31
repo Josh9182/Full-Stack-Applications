@@ -3,7 +3,7 @@ using FileConverter.Interfaces;
 
 namespace Services.Readers;
 
-public class TxtReader : IReader
+public class TxtReader : IReader 
 {
     public async Task<List<Dictionary<string, object>>> Reader(Stream stream)
     {

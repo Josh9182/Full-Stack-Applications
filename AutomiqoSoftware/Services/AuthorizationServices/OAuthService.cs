@@ -1,1 +1,0 @@
-namespace AutomiqoSoftware.Services.AuthorizationServices;

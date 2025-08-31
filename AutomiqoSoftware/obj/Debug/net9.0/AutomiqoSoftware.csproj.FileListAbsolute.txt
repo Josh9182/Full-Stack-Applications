@@ -1,5 +1,0 @@
-C:\Users\Xxwha\AutomiqoSoftware\obj\Debug\net9.0\AutomiqoSoftware.csproj.AssemblyReference.cache
-C:\Users\Xxwha\AutomiqoSoftware\obj\Debug\net9.0\AutomiqoSoftware.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Xxwha\AutomiqoSoftware\obj\Debug\net9.0\AutomiqoSoftware.csproj.CoreCompileInputs.cache
-C:\Users\Xxwha\AutomiqoSoftware\obj\Debug\net9.0\AutomiqoSoftware.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Xxwha\AutomiqoSoftware\obj\Debug\net9.0\AutomiqoSoftware.MvcApplicationPartsAssemblyInfo.cache

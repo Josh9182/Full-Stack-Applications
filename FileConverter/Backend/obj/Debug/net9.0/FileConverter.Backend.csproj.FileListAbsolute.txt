@@ -11,3 +11,5 @@ C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\ne
 C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\refint\FileConverter.Backend.dll
 C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.pdb
 C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\ref\FileConverter.Backend.dll
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\bin\Debug\net9.0\FileConverter.Backend.runtimeconfig.json
+C:\Users\Xxwha\Downloads\Programming Projects\FileConverter\Backend\obj\Debug\net9.0\FileConverter.Backend.genruntimeconfig.cache

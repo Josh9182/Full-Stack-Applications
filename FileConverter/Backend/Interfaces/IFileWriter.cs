@@ -2,5 +2,5 @@ namespace FileConverter.Interfaces;
 
 public interface IFileWriter
 {
-    Task<MemoryStream> Writer(List<Dictionary<string, object>> records);
+    Task Writer(List<Dictionary<string, object>> records, Stream outputStream);
 }

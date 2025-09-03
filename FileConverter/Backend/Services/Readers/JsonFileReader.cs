@@ -20,23 +20,22 @@ public class JsonFileReader : IFileParser
                                                                    dissect the oject's values. 
                                                                 */
                     {
-                        records.Add(ValueProcessor(item));
+                        records.Add(ObjectProcessor(item));
                     }
                     else
                     {
-                        records.Add(new Dictionary<string, object> /* if != object, add a default key and then 
-                                                                      dissect the array's values via the Handler
-                                                                      as opposed to the Processor.
-                                                                   */
-                        {
-                            {"value", ValueKindHandler(item)}
-                        });
+                        var objectValues = new Dictionary<string, object>(); 
+                        objectValues.Add("value", ValueKindHandler(item));
+                        records.Add(objectValues); /* if != object, add a default key and then 
+                                                      dissect the array's values via the Handler
+                                                      as opposed to the Processor.
+                                                   */
                     }
                 }
                 break;
 
             case JsonValueKind.Object: // If container == Object...
-                records.Add(ValueProcessor(jsonReader.RootElement)); // Process the object as a whole and store the result
+                records.Add(ObjectProcessor(jsonReader.RootElement)); // Process the object as a whole and store the result
                 break;
 
             default:
@@ -47,7 +46,7 @@ public class JsonFileReader : IFileParser
 
     }
 
-    private static Dictionary<string, object> ValueProcessor(JsonElement element) // JSON object exclusive.
+    private static Dictionary<string, object> ObjectProcessor(JsonElement element) // JSON object exclusive.
     {
         var dict = new Dictionary<string, object>(); // Every JsonElement will have a Dictionary associated with it.
 
@@ -64,10 +63,10 @@ public class JsonFileReader : IFileParser
         switch (element.ValueKind)
         {
             case JsonValueKind.Object: // {}
-                return ValueProcessor(element); /* As long as an Object is found, 
-                                                    recursively shove it through the ValueProcessor 
-                                                    until its values are organized correctly. 
-                                                 */
+                return ObjectProcessor(element); /* As long as an Object is found, 
+                                                   recursively shove it through the ObjectProcessor 
+                                                   until its values are organized correctly. 
+                                                */
 
             case JsonValueKind.Array: // []
                 var list = new List<object>();

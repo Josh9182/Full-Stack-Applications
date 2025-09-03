@@ -1,26 +1,23 @@
 using FileConverter.Interfaces;
 using Services.Readers;
 using System.Text;
-using System.Text;
 using System.IO;
-using System.Linq;
 
 namespace ServiceTests.ParserTests;
+
 public class TxtFileReaderTests
 {
     [Fact]
     [Trait("Category", "TxtFRT_VI")]
-    public async Task CsvFRT_ValidInput()
+    public async Task TxtFRT_ValidInput()
     {
-        var content = "Hello!\nGoodbye!\nHello!";
+        var content = "Hello! This is a test!\n New Line.";
         using var stream = new MemoryStream(Encoding.UTF8.GetBytes(content));
-        var csvReader = new CsvFileReader();
+        var txtReader = new TxtFileReader();
 
-        var result = await csvReader.Reader(stream);
+        var result = await txtReader.Reader(stream);
 
-        var resultCount = result.Sum(d => d.Count);
-
-        Assert.Equal(2, resultCount); // Count of records within the Task<List<Dictionary<string, object>>>
-        Assert.NotNull(result); // CSV successfully parsed
+        Assert.Equal(2, result.Count); // Count of records within the Task<List<Dictionary<string, object>>>
+        Assert.NotNull(result); // TXT file successfully parsed
     }
 }

@@ -31,7 +31,7 @@ public class XmlFileReader : IFileParser
 
         foreach (var rootAttributes in xmlNode.Attributes()) // Cannot be duplicated, therefore foreach loop
         {
-            if (!string.IsNullOrEmpty(rootAttributes.Name.NamespaceName))
+            if (!string.IsNullOrEmpty(rootAttributes.Name.NamespaceName)) // Check for namespaces (:ns) attached to attributes
             {
                 var attributeNamespace = rootAttributes.Name.NamespaceName;
                 records["@attribute_" + rootAttributes.Name.LocalName] = new Dictionary<string, object>

@@ -27,12 +27,12 @@ public class XmlFileReaderTests
 
         var results = await xmlReader.Reader(ms);
 
-        var dict = results.Single();
-        var rootShelf = (Dictionary<string, object>)dict["Shelf"];
-        Assert.Equal("Oak", rootShelf["@attribute_Material"]);
-        Assert.Equal("http://example.com/default-namespace", rootShelf["@namespace"]);
+        var dict = results.Single(); // Check for 1 dictionary
+        var rootShelf = (Dictionary<string, object>)dict["Shelf"]; // Cast a dictionary object onto the variable, grabbing the root ("Shelf)
+        Assert.Equal("Oak", rootShelf["@attribute_Material"]); 
+        Assert.Equal("http://example.com/default-namespace", rootShelf["@namespace"]); // Ensure Value & Key are both correct 
 
-        var nodeBook = (Dictionary<string, object>)rootShelf["Book"];
+        var nodeBook = (Dictionary<string, object>)rootShelf["Book"]; // Grab the child element node, Book
         Assert.Equal("Josh L.", nodeBook["@attribute_Author"]);
         Assert.Equal("The Ballad of Josh Lewis", nodeBook["@text"]);
 

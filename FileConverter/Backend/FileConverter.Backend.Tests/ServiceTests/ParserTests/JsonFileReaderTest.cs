@@ -3,6 +3,7 @@ using Services.Readers;
 using System.IO;
 using System.Text;
 using System.Linq;
+using System.Reflection.Metadata;
 
 namespace ServiceTests.ParserTests;
 
@@ -50,5 +51,17 @@ public class JsonFileReaderTests
     {
         var content = @"[]";
         using var stream = new MemoryStream(Encoding.UTF8.GetBytes(content));
+
+        var jsonReader = new JsonFileReader();
+
+        var result = await jsonReader.Reader(stream);
+
+        foreach (var r in result)
+        {
+            Assert.True(r.ContainsKey(""));
+            Assert.True(r.ContainsValue("")); // Key(s) & Value(s) SHOULD be null since JSON input is empty
+        }
+
+        Assert.NotNull(result); // File input successfully accessed, leaving empty object.
     }
 }

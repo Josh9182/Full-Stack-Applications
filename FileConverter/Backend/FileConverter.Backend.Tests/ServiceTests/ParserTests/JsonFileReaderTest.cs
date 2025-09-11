@@ -2,6 +2,7 @@ using FileConverter.Interfaces;
 using Services.Readers;
 using System.IO;
 using System.Text;
+using System.Linq;
 
 namespace ServiceTests.ParserTests;
 
@@ -32,11 +33,15 @@ public class JsonFileReaderTests
 
         var result = await jsonReader.Reader(stream);
 
+        foreach (var r in result)
+        { 
+            Assert.True(r.ContainsKey("person")); // [0] key, with a dictionary as a value, storing 4 key-value pairs, and 2 nested key-value pairs. 
+            Assert.True(r.ContainsKey("skills")); // [1] key, storing a value of a list of strings
+            Assert.True(r.ContainsKey("manager")); // [2] key, storing null as a value.
+        }
+
         Assert.NotNull(result); 
         Assert.Equal(1, result.Count); // Object {} is the root element, which then becomes the single containerizing dictionary 
-        Assert.True(result.ContainsKey("person")); // [0] key, with a dictionary as a value, storing 4 key-value pairs, and 2 nested key-value pairs. 
-        Assert.True(result.ContainsKey("skills")); // [1] key, storing a value of a list of strings
-        Assert.True(result.ContainsKey("manager")); // [2] key, storing null as a value.
     }
 
     [Fact]

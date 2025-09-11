@@ -4,7 +4,6 @@ using System.Globalization;
 using FileConverter.Interfaces;
 using Services.Readers;
 using System.Text;
-using System.Text;
 using System.IO;
 using System.Linq;
 

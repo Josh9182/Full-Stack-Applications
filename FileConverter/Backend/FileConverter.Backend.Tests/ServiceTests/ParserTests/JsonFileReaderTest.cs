@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using System.Linq;
 using System.Reflection.Metadata;
+using Xunit;
 
 namespace ServiceTests.ParserTests;
 

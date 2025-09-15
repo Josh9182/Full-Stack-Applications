@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileConverter.Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd0a66381ca5e717f299c516527a11528608eb88")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61ef05781a20a14234d514cad9639a34f277a616")]
 [assembly: System.Reflection.AssemblyProductAttribute("FileConverter.Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileConverter.Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

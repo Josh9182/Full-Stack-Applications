@@ -2,6 +2,7 @@ using FileConverter.Interfaces;
 using Services.Readers;
 using System.Text;
 using System.IO;
+using Xunit;
 
 namespace ServiceTests.ParserTests;
 
@@ -17,7 +18,14 @@ public class TxtFileReaderTests
 
         var result = await txtReader.Reader(stream);
 
-        Assert.Equal(2, result.Count); // Count of records within the Task<List<Dictionary<string, object>>>
         Assert.NotNull(result); // TXT file successfully parsed
+        Assert.Equal(2, result.Count);
+
+        var indexOneDict = result[0];
+        Assert.Equal("Hello! This is a test!", indexOneDict["0"]);
+
+        var indexTwoDict = result[1];
+        Assert.Equal(" New Line.", indexTwoDict["1"]);
+
     }
 }

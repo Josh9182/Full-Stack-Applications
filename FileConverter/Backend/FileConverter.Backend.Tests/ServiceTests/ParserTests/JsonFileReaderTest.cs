@@ -35,15 +35,27 @@ public class JsonFileReaderTests
 
         var result = await jsonReader.Reader(stream);
 
-        foreach (var r in result)
-        { 
-            Assert.True(r.ContainsKey("person")); // [0] key, with a dictionary as a value, storing 4 key-value pairs, and 2 nested key-value pairs. 
-            Assert.True(r.ContainsKey("skills")); // [1] key, storing a value of a list of strings
-            Assert.True(r.ContainsKey("manager")); // [2] key, storing null as a value.
-        }
-
-        Assert.NotNull(result); 
+        Assert.NotNull(result);
         Assert.Equal(1, result.Count); // Object {} is the root element, which then becomes the single containerizing dictionary 
+
+        var dict = result.Single();
+        var person = (Dictionary<string, object>)dict["person"]; // First key
+        Assert.Equal("Josh", person["name"]);
+        Assert.Equal(30, person["age"]);
+        Assert.Equal(true, person["isEmployee"]);  // Checking all primitive values
+
+        var address = (Dictionary<string, object>)person["address"]; // Accessing sub object
+        Assert.Equal("123 Main St", address["street"]);
+        Assert.Equal("Salt Lake City", address["city"]);
+
+        var skills = (List<object>)dict["skills"]; 
+        Assert.Equal("C#", skills[0]);
+        Assert.Equal("React", skills[1]);
+        Assert.Equal("SQL", skills[2]);
+
+        var manager = (Dictionary<string, object>)dict["manager"];
+        Assert.Null(manager);
+
     }
 
     [Fact]
@@ -57,12 +69,7 @@ public class JsonFileReaderTests
 
         var result = await jsonReader.Reader(stream);
 
-        foreach (var r in result)
-        {
-            Assert.True(r.ContainsKey(""));
-            Assert.True(r.ContainsValue("")); // Key(s) & Value(s) SHOULD be null since JSON input is empty
-        }
-
         Assert.NotNull(result); // File input successfully accessed, leaving empty object.
+        Assert.Empty(result);
     }
 }

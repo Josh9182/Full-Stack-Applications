@@ -16,15 +16,18 @@ public class CsvFileReaderTests
     [Trait("Category", "CsvFRT_VI")]
     public async Task CsvFRT_ValidInput()
     {
-        var content = "Hello!\nGoodbye!\nHello!";
+        var content = "Good Afternoon!\nGood Evening!\nGood Night!";
         using var stream = new MemoryStream(Encoding.UTF8.GetBytes(content));
         var csvReader = new CsvFileReader();
 
         var result = await csvReader.Reader(stream);
 
-        var resultCount = result.Sum(d => d.Count);
-
-        Assert.Equal(2, resultCount); // Count of records within the Task<List<Dictionary<string, object>>>
         Assert.NotNull(result); // CSV successfully parsed
+
+        var firstDict = result[0];
+        Assert.Equal("Good Evening!", firstDict["Good Afternoon!"]);
+
+        var secondDict = result[1];
+        Assert.Equal("Good Night!", secondDict["Good Afternoon!"]);
     }
 }

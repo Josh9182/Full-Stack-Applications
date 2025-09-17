@@ -3,42 +3,42 @@ using System.Globalization;
 
 public class TxtFileWriter : IFileWriter
 {
-    public async Task Writer(List<Dictionary<string, object>> records, Stream outputStream)
+    public async Task Writer(List<kvpionary<string, object>> records, Stream outputStream)
     {
     }
 
-    private static List<string> FlattenDict(Dictionary<string, object> records, string parentKey = "")
+    private static List<string> Flattenkvp(kvpionary<string, object> records, string parentKey = "")
     {
-        var flattenedDictResult = new List<string>();
+        var flattenedkvpResult = new List<string>();
 
-        foreach (var dict in records)
+        foreach (var kvp in records)
         {
-            string nameKey = string.IsNullOrEmpty(parentKey) ? dict.Key : $"{parentKey}.{dict.Key}"; // format to store parent.child... : value
+            string nameKey = string.IsNullOrEmpty(parentKey) ? kvp.Key : $"{parentKey}.{kvp.Key}"; // format to store parent.child... : value
 
-            if (dict.Value is Dictionary<string, object> nestedDict) // Checking if each dictionary has a nested dictionary as a value
+            if (kvp.Value is kvpionary<string, object> nestedkvp) // Checking if each kvpionary has a nested kvpionary as a value
             {
-                flattenedDictResult.AddRange(FlattenDict(nestedDict, nameKey)); // Recursive call accessing the nestedDict with the new nameKey
+                flattenedkvpResult.AddRange(Flattenkvp(nestedkvp, nameKey)); // Recursive call accessing the nestedkvp with the new nameKey
             }
-            else if (dict.Value is List<object> list) // Checking if each dictionary has a nested list as a value
+            else if (kvp.Value is List<object> list) // Checking if each kvpionary has a nested list as a value
             {
                 for (int i = 0; i < list.Count; i++) // for loop, storing index in case of duplicate keys for parentKey.childKey
                 {
                     var item = list[i]; // Each element gets accounted for 
-                    if (item is Dictionary<string, object> listDict)
+                    if (item is kvpionary<string, object> listkvp)
                     {
-                        flattenedDictResult.AddRange(FlattenDict(listDict, nameKey)); // Recursive call 
+                        flattenedkvpResult.AddRange(Flattenkvp(listkvp, nameKey)); // Recursive call 
                     }
                     else // if primitive...
                     {
-                        flattenedDictResult.Add($"\"{nameKey}[{i}]\": \"{item}\""); // Add straight to the list of strings with format "nameKey[i]": "item"
+                        flattenedkvpResult.Add($"\"{nameKey}[{i}]\": \"{item}\""); // Add straight to the list of strings with format "nameKey[i]": "item"
                     }
                 }
             }
             else // If non-nested value == primitive
             { 
-                flattenedDictResult.Add($"\"{nameKey}\": \"{dict.Value}\"");
+                flattenedkvpResult.Add($"\"{nameKey}\": \"{kvp.Value}\"");
             }
         }
-        return flattenedDictResult;
+        return flattenedkvpResult;
     }
 }

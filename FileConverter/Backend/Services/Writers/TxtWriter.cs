@@ -1,24 +1,23 @@
 using FileConverter.Interfaces;
+using Services.Helpers;
 using System.Globalization;
 
 public class TxtFileWriter : IFileWriter
 {
     public async Task Writer(List<Dictionary<string, object>> records, Stream outputStream)
     {
-    }
-
-    private static List<string> FlattenDict(Dictionary<string, object> records, string parentKey = "")
-    {
-        var flattenedDictResult = new List<string>();
-
-        foreach (var dict in records)
+        using (var writer = new StreamWriter(outputStream, leaveOpen: true)) /* Registers StreamWriter, writing to the
+                                                                                outputStream param, left open so the stream
+                                                                                can continuously be accessed.
+                                                                             */
         {
-            string nameKey = string.IsNullOrEmpty(parentKey) ? kvp.Key : $"{parentKey}.{kvp.Key}";
-
-            if (kvp.Value is Dictionary<string, object> nestedDict)
+            foreach (var dict in records)
             {
-                flattenedDictResult.AddRange(FlattenDict(nestedDict, parentKey)); 
+                var flattenedList = DictToList.FlattenDict(dict);
+                writer.WriteLine(flattenedList);
             }
-        }   
+        }
+        outputStream.Position = 0; // Resets the stream position to be reused
+
     }
 }

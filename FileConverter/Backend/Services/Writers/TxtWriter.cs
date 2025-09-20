@@ -18,6 +18,5 @@ public class TxtFileWriter : IFileWriter
             }
         }
         outputStream.Position = 0; // Resets the stream position to be reused
-
     }
 }

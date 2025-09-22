@@ -2,6 +2,8 @@ using FileConverter.Interfaces;
 using Services.Helpers;
 using System.Globalization;
 
+namespace Services.Writers;
+
 public class TxtFileWriter : IFileWriter
 {
     public async Task Writer(List<Dictionary<string, object>> records, Stream outputStream)

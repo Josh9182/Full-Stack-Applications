@@ -10,10 +10,10 @@ public class JsonFileWriter : IFileWriter
     {
         var options = new JsonSerializerOptions
         {
-            WriteIndented = true
+            WriteIndented = true // Indent to keep JSON format
         };
 
-        await JsonSerializer.SerializeAsync(outputStream, records, options);
+        await JsonSerializer.SerializeAsync(outputStream, records, options); // Auto convert, no matter how nested 
 
 
     }
